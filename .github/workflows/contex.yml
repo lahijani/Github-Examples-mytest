@@ -1,0 +1,12 @@
+name : Context Example
+
+on: ['push']
+
+jobs:
+   mary-contex:
+     runs-on: ubuntu-latest
+     steps:
+       - name: "My steps"
+         run: echo "Hello! $Mary_action " 
+         env:
+           Mary_action: ${{ github.action}} 
